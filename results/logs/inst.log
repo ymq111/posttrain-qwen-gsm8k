@@ -1,0 +1,153 @@
+nohup: ignoring input
+=========== 0/4 基线评测（Instruct） Mon Nov  2 00:42:56 CST 2026 ===========
+`torch_dtype` is deprecated! Use `dtype` instead!
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+============================================================
+问题: Janet’s ducks lay 16 eggs per day. She eats three for breakfast every morning an ...
+标准: 18 | 预测: 40 | ❌
+输出: To determine how much Janet makes at the farmers' market each day, we need to follow these steps:  1. Calculate the total number of eggs laid by the ducks in one day. 2. Determine the number of eggs e
+进度 8/300  宽松 0.250  严格 0.000
+进度 16/300  宽松 0.250  严格 0.000
+进度 24/300  宽松 0.250  严格 0.000
+进度 32/300  宽松 0.344  严格 0.000
+进度 40/300  宽松 0.400  严格 0.000
+进度 48/300  宽松 0.375  严格 0.000
+进度 56/300  宽松 0.375  严格 0.000
+进度 64/300  宽松 0.391  严格 0.000
+进度 72/300  宽松 0.389  严格 0.000
+进度 80/300  宽松 0.400  严格 0.000
+进度 88/300  宽松 0.420  严格 0.000
+进度 96/300  宽松 0.427  严格 0.000
+进度 104/300  宽松 0.423  严格 0.000
+进度 112/300  宽松 0.429  严格 0.000
+进度 120/300  宽松 0.433  严格 0.000
+进度 128/300  宽松 0.445  严格 0.000
+进度 136/300  宽松 0.463  严格 0.000
+进度 144/300  宽松 0.458  严格 0.000
+进度 152/300  宽松 0.447  严格 0.000
+进度 160/300  宽松 0.438  严格 0.000
+进度 168/300  宽松 0.435  严格 0.000
+进度 176/300  宽松 0.443  严格 0.000
+进度 184/300  宽松 0.440  严格 0.000
+进度 192/300  宽松 0.443  严格 0.000
+进度 200/300  宽松 0.445  严格 0.000
+进度 208/300  宽松 0.447  严格 0.000
+进度 216/300  宽松 0.449  严格 0.000
+进度 224/300  宽松 0.460  严格 0.000
+进度 232/300  宽松 0.461  严格 0.000
+进度 240/300  宽松 0.467  严格 0.000
+进度 248/300  宽松 0.460  严格 0.000
+进度 256/300  宽松 0.457  严格 0.000
+进度 264/300  宽松 0.462  严格 0.000
+进度 272/300  宽松 0.467  严格 0.000
+进度 280/300  宽松 0.471  严格 0.000
+进度 288/300  宽松 0.465  严格 0.000
+进度 296/300  宽松 0.463  严格 0.000
+进度 300/300  宽松 0.463  严格 0.000
+============================================================
+宽松模式（无 #### 时取最后一个数字）: 139/300 = 46.33%
+严格模式（只认 ####）            : 0/300 = 0.00%
+输出中含 #### 的比例              : 0/300 = 0.00%
+平均输出长度                      : 971 字符
+逐题结果已写入                    : /root/autodl-tmp/d_inst_base.jsonl
+=========== 1/4 采样 3000 题 × k=4 Mon Nov  2 00:48:18 CST 2026 ===========
+`torch_dtype` is deprecated! Use `dtype` instead!
+题目数: 3000，每题采样 4 个
+  第 1/4 轮采样完成
+  第 2/4 轮采样完成
+  第 3/4 轮采样完成
+  第 4/4 轮采样完成
+采样完成: 3000 题，其中 2167 题至少有一个正确答案
+可用偏好对: 1532 条 → /root/autodl-tmp/dpo_instruct.jsonl
+=========== 2/4 DPO 训练 Mon Nov  2 03:54:15 CST 2026 ===========
+`torch_dtype` is deprecated! Use `dtype` instead!
+偏好对: 1532 条 | dpo_weight=1.0 nll_weight=0.0 | lr=5e-06 beta=0.2 accum=8
+epoch 1 更新   20/191  dpo_loss=0.6823  nll=0.0000  margin=+0.312
+epoch 1 更新   40/191  dpo_loss=0.6721  nll=0.0000  margin=+0.480
+epoch 1 更新   60/191  dpo_loss=0.6580  nll=0.0000  margin=+0.659
+epoch 1 更新   80/191  dpo_loss=0.6563  nll=0.0000  margin=+0.726
+epoch 1 更新  100/191  dpo_loss=0.6497  nll=0.0000  margin=+0.828
+epoch 1 更新  120/191  dpo_loss=0.6493  nll=0.0000  margin=+0.860
+epoch 1 更新  140/191  dpo_loss=0.6479  nll=0.0000  margin=+0.900
+epoch 1 更新  160/191  dpo_loss=0.6406  nll=0.0000  margin=+1.009
+epoch 1 更新  180/191  dpo_loss=0.6341  nll=0.0000  margin=+1.135
+--- epoch 1  dpo_loss=0.6321  nll=0.0000  margin=+1.171  更新 192 次 ---
+epoch 2 更新  200/191  dpo_loss=0.1098  nll=0.0000  margin=+14.163
+epoch 2 更新  220/191  dpo_loss=0.2427  nll=0.0000  margin=+9.253
+epoch 2 更新  240/191  dpo_loss=0.2572  nll=0.0000  margin=+8.311
+epoch 2 更新  260/191  dpo_loss=0.2687  nll=0.0000  margin=+8.011
+epoch 2 更新  280/191  dpo_loss=0.2722  nll=0.0000  margin=+7.945
+epoch 2 更新  300/191  dpo_loss=0.2793  nll=0.0000  margin=+7.871
+epoch 2 更新  320/191  dpo_loss=0.2855  nll=0.0000  margin=+7.784
+epoch 2 更新  340/191  dpo_loss=0.2918  nll=0.0000  margin=+7.653
+epoch 2 更新  360/191  dpo_loss=0.2862  nll=0.0000  margin=+7.748
+epoch 2 更新  380/191  dpo_loss=0.2867  nll=0.0000  margin=+7.801
+--- epoch 2  dpo_loss=0.2862  nll=0.0000  margin=+7.815  更新 384 次 ---
+已保存到 /root/autodl-tmp/out_dpo_inst
+=========== 3/4 评测 DPO Mon Nov  2 04:04:18 CST 2026 ===========
+The tokenizer you are loading from '/root/autodl-tmp/out_dpo_inst' with an incorrect regex pattern: https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503/discussions/84#69121093e8b480e709447d5e. This will lead to incorrect tokenization. You should set the `fix_mistral_regex=True` flag when loading this tokenizer to fix this issue.
+`torch_dtype` is deprecated! Use `dtype` instead!
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+============================================================
+问题: Janet’s ducks lay 16 eggs per day. She eats three for breakfast every morning an ...
+标准: 18 | 预测: 32 | ❌
+输出: To determine how much money Janet makes every day from selling the eggs, we need to follow these steps:  1. Calculate the total number of eggs laid by the ducks each day. 2. Subtract the number of egg
+进度 8/300  宽松 0.250  严格 0.000
+进度 16/300  宽松 0.312  严格 0.000
+进度 24/300  宽松 0.333  严格 0.000
+进度 32/300  宽松 0.375  严格 0.000
+进度 40/300  宽松 0.375  严格 0.000
+进度 48/300  宽松 0.375  严格 0.000
+进度 56/300  宽松 0.393  严格 0.000
+进度 64/300  宽松 0.438  严格 0.000
+进度 72/300  宽松 0.431  严格 0.000
+进度 80/300  宽松 0.412  严格 0.000
+进度 88/300  宽松 0.443  严格 0.000
+进度 96/300  宽松 0.469  严格 0.000
+进度 104/300  宽松 0.452  严格 0.000
+进度 112/300  宽松 0.446  严格 0.000
+进度 120/300  宽松 0.450  严格 0.000
+进度 128/300  宽松 0.461  严格 0.000
+进度 136/300  宽松 0.478  严格 0.000
+进度 144/300  宽松 0.486  严格 0.000
+进度 152/300  宽松 0.487  严格 0.000
+进度 160/300  宽松 0.475  严格 0.000
+进度 168/300  宽松 0.476  严格 0.000
+进度 176/300  宽松 0.489  严格 0.000
+进度 184/300  宽松 0.484  严格 0.000
+进度 192/300  宽松 0.484  严格 0.000
+进度 200/300  宽松 0.485  严格 0.000
+进度 208/300  宽松 0.481  严格 0.000
+进度 216/300  宽松 0.491  严格 0.000
+进度 224/300  宽松 0.509  严格 0.000
+进度 232/300  宽松 0.509  严格 0.000
+进度 240/300  宽松 0.500  严格 0.000
+进度 248/300  宽松 0.496  严格 0.000
+进度 256/300  宽松 0.492  严格 0.000
+进度 264/300  宽松 0.492  严格 0.000
+进度 272/300  宽松 0.496  严格 0.000
+进度 280/300  宽松 0.504  严格 0.000
+进度 288/300  宽松 0.500  严格 0.000
+进度 296/300  宽松 0.503  严格 0.000
+进度 300/300  宽松 0.503  严格 0.000
+============================================================
+宽松模式（无 #### 时取最后一个数字）: 151/300 = 50.33%
+严格模式（只认 ####）            : 0/300 = 0.00%
+输出中含 #### 的比例              : 0/300 = 0.00%
+平均输出长度                      : 991 字符
+逐题结果已写入                    : /root/autodl-tmp/d_inst_dpo.jsonl
+=========== 4/4 配对比较 Mon Nov  2 04:09:36 CST 2026 ===========
+题数: 300
+基线准确率: 46.33%
+对比准确率: 50.33%
+净变化    : +4.00 个百分点
+
+两者都对: 111
+两者都错: 121
+A 改对  : 40
+B 改错  : 28
+
+McNemar 精确检验 p = 0.1818 → 不显著（差异可能来自波动）
+
+平均输出长度: 971 → 991 字符 (+2.1%)
+=========== 全部完成 Mon Nov  2 04:09:36 CST 2026 ===========
