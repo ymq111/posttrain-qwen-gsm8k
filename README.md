@@ -1,4 +1,4 @@
-# 单卡后训练实践：Qwen2.5-0.5B 上的 SFT / DPO / GRPO
+﻿# 单卡后训练实践：Qwen2.5-0.5B 上的 SFT / DPO / GRPO
 
 在一张 24 GB 显卡（RTX 3090 / 4090）上，从零手写实现并对比三种后训练方法，目标是跑通完整闭环：
 **数据构建 → 训练 → 评测 → 分析 → 迭代**。
@@ -118,10 +118,11 @@ DPO 与最佳 GRPO 的逐题配对为 99 改对 / 110 改错（净 −11 题）�
 │   ├── diag/                  # 梯度检查、过拟合测试、四节链条诊断
 │   └── data/                  # 题库扩充核查
 ├── docs/
-│   ├── report.md              # 技术报告（约 3500 字）
+│   ├── report.md              # 技术报告（约 3900 字）
 │   ├── ablation.md            # 消融实验
 │   ├── error-analysis.md      # 12 条错题归因
-│   └── why-grpo-weaker-than-dpo.md
+│   ├── why-grpo-weaker-than-dpo.md
+│   └── experiment-log-grpo.md  # 扩题实验记录（grpo13）
 └── results/
     ├── figures/               # 两张主图
     ├── dumps/                 # 逐题结果（idx / gold / pred / ok / len）
