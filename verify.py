@@ -86,6 +86,7 @@ def main():
         ("d1019_grpo12u1426.jsonl", "GRPO seedB (1426 upd)"),
         ("d1019_grpo12.jsonl", "GRPO seedB (2872 upd)"),
         ("d1019_grpo13.jsonl", "GRPO expand (2000q x3)"),
+        ("d1019_grpo13_s2.jsonl", "GRPO expand seed2 (2000q x3)"),
     ]
 
     rows = []
@@ -110,6 +111,8 @@ def main():
          "seedA  vs  seedB (both 6ep)"),
         ("d1019_grpo12.jsonl", "d1019_grpo13.jsonl",
          "500q x12  vs  2000q x3"),
+        ("d1019_grpo13.jsonl", "d1019_grpo13_s2.jsonl",
+         "2000q x3: seed1 vs seed2"),
     ]
     for a, b, label in pairs:
         if os.path.exists(os.path.join(DUMPS, a)) and os.path.exists(
